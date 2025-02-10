@@ -23,7 +23,7 @@ def load_and_prepare_data(ds_name):
     df.columns = ['id', 'txt', 'label']
 
     # -- Shuffle df --
-    df = df.sample(frac=0.1).reset_index(drop=True)
+    df = df.sample(frac=1).reset_index(drop=True)
 
     # -- replace label -1(reals) with 0--
     df['label'] = df['label'].replace(-1, 0)
